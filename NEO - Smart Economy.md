@@ -1,4 +1,5 @@
-
+# NEO - Smart Economy
+## Introduction
 
 ## Resources 
 * Official site - https://neo.org/
