@@ -28,3 +28,5 @@ The first ever cryptocurrency i.e. **"Bitcoin"** came with a mining algorithm ca
 
 ## References 
 * Bitcoin Analogy - https://www.ybrikman.com/writing/2014/04/24/bitcoin-by-analogy/
+* PoSV FAQs - https://www.reddcoin.com/papers/PoSV_FAQ.pdf
+* PoS - http://cryptorials.io/glossary/proof-of-stake/
