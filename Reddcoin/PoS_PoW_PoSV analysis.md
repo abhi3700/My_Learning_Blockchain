@@ -2,7 +2,7 @@ Here, we will do analysis of the cryptocurrency mining methods. We will start wi
 
 The first ever cryptocurrency i.e. **"Bitcoin"** came with a mining algorithm called PoW. The algorithm was invented by the creator "Satoshi Nakamoto".
 
-******************************************************************************************************************************************
+***
 ## PoW
 #### Concept:-
 ![](https://www.ybrikman.com/assets/img/blog/bitcoin/bitcoin-block-chain-verified.png)
