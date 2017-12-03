@@ -1,4 +1,6 @@
-Here, we will do analysis of the cryptocurrency mining methods. We will start with **Proof-of-Work (PoW)** and then switch to a better algorithm called **Proof-of-Stake (PoS)**. Finally, a comparison will be made with **Proof-of-Stake Velocity (PoSV)** which is used in **Reddcoin**.
+![Untitled-1.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1512288316/nxfqhgmcnhnb831vvgyh.png)
+
+Here, we will do analysis of the cryptocurrency mining methods. We will start with **Proof-of-Work (PoW)** and then switch to a better algorithm called **Proof-of-Stake (PoS)**. Finally, a comparison will be made with **Proof-of-Stake-Velocity (PoSV)** which is used in **Reddcoin**.
 
 The first ever cryptocurrency i.e. **"Bitcoin"** came with a mining algorithm called PoW. The algorithm was invented by the creator "Satoshi Nakamoto".
 
@@ -13,20 +15,23 @@ The first ever cryptocurrency i.e. **"Bitcoin"** came with a mining algorithm ca
 #### Problems:-
 * Huge energy wastage
 ### FACT: The amount of electricity spent for mining a single Bitcoin block is equivalent to the amount of electricity consumed by a big city for household purpose. 
+
 * With the advent of Quantum computers, one can hold 51% majority (at least) and hence validate all the blocks everytime. Even that person can alter the blocks in the blockchain using that much computing power very fast. Eventually, the Blockchain is HACKED!!!... 
 
 
 
 
 ## PoS
+#### Concepts:-
 #### Characteristics:-
 
 #### Problems:-
 
 ## PoSV
+#### Concepts:-
+#### Characteristics:-
+
+#### Problems:-
 
 
-## References 
-* Bitcoin Analogy - https://www.ybrikman.com/writing/2014/04/24/bitcoin-by-analogy/
-* PoSV FAQs - https://www.reddcoin.com/papers/PoSV_FAQ.pdf
-* PoS - http://cryptorials.io/glossary/proof-of-stake/
+
