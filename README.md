@@ -4,3 +4,4 @@
 
 ## Resources
 * Blockchain 101 - http://www.blockchain-utopia.com/
+* cryptocurrencies' block time, hashrate, etc. - https://bitinfocharts.com/ , https://coinmarketcap.com/
