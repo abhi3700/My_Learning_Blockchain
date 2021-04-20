@@ -21,5 +21,11 @@
 * Gods Unchained is a digital collectible card game where cards are issued as NFTs on the blockchain. Since each digital card is unique, players can own and trade them with the same level of ownership as if they were physical cards.
 * Crypto Stamps are issued by the Austrian Postal Service and connect the digital world to the real-world. These stamps are used to transport mail like any other stamp. But, they are also saved as digital images on the Ethereum blockchain, making them a tradable digital collectible.
 
+## Standards
+* [simpleassets]
+
+### AtomicAssets
+* Home - https://atomicassets.io/
+
 ## References
 * [A Guide to Crypto Collectibles and Non-fungible Tokens (NFTs)](https://academy.binance.com/en/articles/a-guide-to-crypto-collectibles-and-non-fungible-tokens-nfts)
