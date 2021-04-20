@@ -27,5 +27,6 @@
 ### AtomicAssets
 * Home - https://atomicassets.io/
 
+
 ## References
 * [A Guide to Crypto Collectibles and Non-fungible Tokens (NFTs)](https://academy.binance.com/en/articles/a-guide-to-crypto-collectibles-and-non-fungible-tokens-nfts)
