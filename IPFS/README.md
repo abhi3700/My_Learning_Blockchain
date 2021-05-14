@@ -19,5 +19,11 @@
 * File upload steps (M-2):
 	1. Upload using [API service](https://nft.storage/#configure-as-a-remote-pinning-service)
 
+
+
 ## Repositories
-* 
+* A python client library for the IPFS API - https://github.com/ipfs-shipyard/py-ipfs-http-client
+
+## References
+* [Using IPFS For Distributed File Storage Systems
+](https://medium.com/0xcode/using-ipfs-for-distributed-file-storage-systems-61226e07a6f)
