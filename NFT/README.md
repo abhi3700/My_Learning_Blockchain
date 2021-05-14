@@ -27,6 +27,19 @@
 ### AtomicAssets
 * Home - https://atomicassets.io/
 
+## Problems
+The followings are the problems highlighted below:
+- The big NFTs marketplaces like Nifty Gateway, Makerplace, etc. use Ethereum Blockchain which takes high transaction fees.
+- Per NFT's deposit is costly for the environment. The real-world energy used to process a single Ethereum transaction is equivalent to the average EU resident’s power usage for four days. It’s a huge drain on the environment. And for users, this can mean expensive ‘gas fees’ – a complex costs system where buyers and sellers pay for the energy use of processing blockchain transactions.
+
+## Marketplace
+### Ethereum
+* Opensea
+* Nifty Gateway
+* Makerplace
+
+### EOS
+* AtomicHub
 
 ## References
 * [A Guide to Crypto Collectibles and Non-fungible Tokens (NFTs)](https://academy.binance.com/en/articles/a-guide-to-crypto-collectibles-and-non-fungible-tokens-nfts)
