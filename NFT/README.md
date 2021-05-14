@@ -35,11 +35,16 @@ The followings are the problems highlighted below:
 ## Marketplace
 ### Ethereum
 * Opensea
+	- Upload NFTs & get url as "https://bafybeicmxwhc27akqx4ro6zsfpne4ibh6wo6kaxzgv4zz76hgpul4jkpbu.ipfs.dweb.link/"
+	- Upload NFT files [here](https://nft.storage/files/) | FREE with no limit
 * Nifty Gateway
 * Makerplace
 
 ### EOS
 * AtomicHub
+	- Upload NFTs & get url as "https://gateway.pinata.cloud/ipfs/QmUFQbMx6gtFxSDTB2ft7xJVerT4fNYuE474xfT8GhvRE9U"
+	- Upload NFT files [here](https://pinata.cloud/) | FREE upto 1 GB
+
 
 ## References
 * [A Guide to Crypto Collectibles and Non-fungible Tokens (NFTs)](https://academy.binance.com/en/articles/a-guide-to-crypto-collectibles-and-non-fungible-tokens-nfts)
