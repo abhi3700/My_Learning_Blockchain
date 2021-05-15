@@ -42,6 +42,7 @@ The followings are the problems highlighted below:
 
 ### EOS
 * AtomicHub
+	- user's RAM is consumed for every new collection created (all the metadata is stored like description, marketrate, name, display)
 	- Upload NFTs & get url as "https://gateway.pinata.cloud/ipfs/QmUFQbMx6gtFxSDTB2ft7xJVerT4fNYuE474xfT8GhvRE9U"
 	- Upload NFT files [here](https://pinata.cloud/) | FREE upto 1 GB
 
