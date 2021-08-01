@@ -15,6 +15,8 @@
 ### Steem
 * My repo - https://github.com/abhi3700/My_Learning-Steem
 
+## [GLossary](https://www.gemini.com/cryptopedia/glossary)
+
 ## Resources
 * Blockchain 101 - http://www.blockchain-utopia.com/
 * cryptocurrencies' block time, hashrate, etc. - https://bitinfocharts.com/ , https://coinmarketcap.com/
