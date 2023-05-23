@@ -1,3 +1,6 @@
 [submodule "DeFi"]
 	path = DeFi
 	url = https://github.com/abhi3700/My_Learning_DeFi.git
+[submodule "AntelopeIO"]
+	path = AntelopeIO
+	url = https://github.com/abhi3700/My_Learning_EOS.git
