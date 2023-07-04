@@ -59,6 +59,12 @@ So, there are the solutions to this problem:
   - Type-2: There can be liquidity pools sitting on top of decentralized infrastructure like L0 solutions - Cosmos, Substrate. For instance, if we build a DEX on top of global storage of substrate global state, then all the parachains can leverage the available liquidity pools of the DEX.
     - Support other blockchain protocols: EVM, EOSIO, Solana, etc. via GMP or XCMP.
 - **liquidity leveraging stablecoin for handling cross-chain liquidity & swaps**. [Squid](https://www.squidrouter.com/) project. It's a natural choice given that the stablecoin has a presence on every blockchain network.
+  - Every swap using Squid is a combination of the below:
+    1. Swap ERC20 --> native USDC (Uniswap or equiv)
+    1. Swap native USDC --> axlUSDC (Curve or equiv)
+    1. Bridge axlUSDC --> axlUSDC
+    1. Swap axlUSDC --> native USDC (Curve or equiv)
+    1. Swap native USDC --> ERC20 (Uniswap or equiv)
 
 ## References
 
