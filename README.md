@@ -13,6 +13,17 @@ The architecture diagrams required for a smart contracts:
 3. Sequence diagram
    - consists of functions call mostly
 
+## Concepts
+
+These concepts are common for all the blockchains when they are built.
+
+- 51% attack:
+  - In 1st generation blockchains (Bitcoin), when a group of miners control more than 50% of the network's mining hashrate.
+- <u>Sybil attack</u>:
+  - Problem: Each node is actually a part of 1 big entity. So, it can be controlled by 1 person.
+  - Solution: As per Nakamoto, Nodes committing to resources (e.g. Proof of Work, Proof of Stake, etc.) can be considered as Sybil attack resistant because they would have to commit to resources for each identity they want to create. This is expensive and not feasible.
+    > In web2 world, sybil attack is controlled by KYC or phone number verification.
+
 ## Repositories
 
 ### AntelopeIO
