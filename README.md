@@ -17,12 +17,31 @@ The architecture diagrams required for a smart contracts:
 
 These concepts are common for all the blockchains when they are built.
 
-- 51% attack:
-  - In 1st generation blockchains (Bitcoin), when a group of miners control more than 50% of the network's mining hashrate.
-- <u>Sybil attack</u>:
-  - Problem: Each node is actually a part of 1 big entity. So, it can be controlled by 1 person.
-  - Solution: As per Nakamoto, Nodes committing to resources (e.g. Proof of Work, Proof of Stake, etc.) can be considered as Sybil attack resistant because they would have to commit to resources for each identity they want to create. This is expensive and not feasible.
-    > In web2 world, sybil attack is controlled by KYC or phone number verification.
+51% attack:
+
+- In 1st generation blockchains (Bitcoin), when a group of miners control more than 50% of the network's mining hashrate.
+
+---
+
+<u>Authoring node</u>: In a blockchain network, the node that creates a block. This node is selected via a consensus mechanism. The verifier node is the one that validates the block after getting added by the Authoring node. If it doesn't validate, the block is rejected. Hence, doesn't get added to the blockchain. Hence, the authoring node doesn't get the reward. The time taken to make a block immutable is called "Finality time".
+
+---
+
+<u>Sybil attack</u>:
+
+- Problem: Each node is actually a part of 1 big entity. So, it can be controlled by 1 person.
+- Solution: As per Nakamoto, Nodes committing to resources (e.g. Proof of Work, Proof of Stake, etc.) can be considered as Sybil attack resistant because they would have to commit to resources for each identity they want to create. This is expensive and not feasible.
+
+  > In web2 world, sybil attack is controlled by KYC or phone number verification.
+
+---
+
+<details>
+<summary>Digital signatures:</summary>
+
+![](img/digital-signature.png)
+
+</details>
 
 ## Repositories
 

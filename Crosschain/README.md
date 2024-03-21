@@ -17,7 +17,7 @@ Cross-chain is a term used to describe the ability to exchange assets between tw
   - Axelar GMP (started from Cosmos) is analogous to XCMP of Substrate.
   - The destination chain receives signed message & then executes it. So, no need of ensuring the gas cost by the sender (on source chain).
 
-- Layerzero
+- [Layerzero](./layerzero.md)
 - Substrate XCM
 - Cosmos IBC
 
@@ -70,3 +70,4 @@ So, there are the solutions to this problem:
 
 - [What Is a Cross-Chain Swap?](https://axelar.network/blog/what-is-a-cross-chain-swap)
 - [Benefits and Risks: Are Cross-Chain Bridges Worth It?](https://axelar.network/blog/cross-chain-bridges-benefits-limitations-risks)
+- [LayerZero: The Language of the Omnichain](https://www.notboring.co/p/layerzero-the-language-of-the-omnnichain)
