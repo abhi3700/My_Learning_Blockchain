@@ -6,6 +6,7 @@
 - It's considered as "**the language of blockchains**".
 - It's often compared to **TCP/IP of internet**.
 - It is a protocol that allows blockchains to communicate with each other.
+- Since launch day, LayerZero has delivered over 87 million messages, with over 31,000 smart contracts live on Mainnet, and Bryan tells me that over $40 billion has moved through its pipes… all without a hack.
 
 ## Notes
 
@@ -39,7 +40,29 @@
   </details>
 
   Second, **they’re slow, painful, and a little bit scary**. Bridging tokens means figuring out how to get the native token of the chain you’re bridging to in order to pay gas fees for that end of the transaction, putting your valuable tokens into a website, signing them away, and then waiting for a painfully long time. More than once, I’ve worried if my tokens were lost forever while I waited.
+- By building a messaging protocol instead of a bridge, LayerZero Labs eliminated the idea of locking and wrapping tokens, got rid of the honeypot, bundled a bunch of steps into one message, and removed the need to worry about gas.
+- Chain A sends a message containing bytes to Chain B, and Chain B executes whatever instructions are contained in the bytes.
+- Standards:
+  - **Omnichain Fungible Token (OFT)**: “This standard works by burning tokens on the source chain whenever an omnichain transfer is initiated, sending a message via the protocol and delivering a function call to the destination contract to mint the same number of tokens burned, creating a unified supply across both networks.”
+- Usages:
+  - Transfer, Swap, Purchase: a user could move OFT X from Chain A, swap it on chain B for OFT Y, and then use OFT Y to purchase an NFT on chain B.
+- **Oracle's job**: fetch block headers – like a summary of each block on the blockchain – from Chain A and send it to Chain B so that each chain can verify the other’s current state and integrity. At launch, Chainlink, a leading oracle, was the most popular option, and in September, LayerZero Labs announced that Google Cloud would become the default Oracle. The lab assumed that there would be initiative to create a meta-oracle which would consist of many oracles, but didn't happen.
+- **Relayer's job**: is to provide the necessary proof that a particular event or transaction happened on Chain A, which Chain B could then act upon. For example, it could say, “Yes, the user approved sending 10 ETH from Ethereum to Polygon, and we, Chain A, have burnt the 10 ETH. Your turn.”  Crucially, the Relayer was responsible for both security and execution. It handled things like quoting pricing pairs across 40+ different chains in real-time, sending 50-80 billion RPC calls per month to get information, writing millions of messages to chain, and abstracting gas payments away from the user.
+- To get widespread adoption and become the TCP/IP for blockchains, LayerZero has to do two things, each of which reinforces the other:
+  - **Hook into More Chains**. Deploy endpoints on more chains so that the protocol can serve developers and users wherever they want to operate.
+  - **Integrate with More Apps and Protocols**. Convince more applications and protocols to build on LayerZero to build omnichain apps or bridge their tokens by adopting the OFT Standard.
+
+  The more chains LayerZero is on, the more compelling the value prop for more apps and protocols.
+- LayerZero vs Wormhole voting for Uniswap v3's decision to use as cross-chain protocol. [Entire thread](https://www.notboring.co/i/139780381/how-interoperability-protocols-compete), if interested.
+  - Reasoning given by Uniswap v3 Governance to choose Wormhole over LayerZero via voting (although a16z couldn't vote due to infrastructure unavailability, supported LZ via tweet):
+  > After assessing the current version of the LayerZero protocol, the Committee has concluded that it does not currently satisfy the full breadth of the requirements of the Uniswap DAO's cross-chain governance use case as outlined in the assessment framework, but is on a path to do so. LayerZero employs a combination of two types of validators to secure the protocol: Oracles and Relayers. **However, currently, the available options for Oracles and Relayers do not offer the level of decentralization and security required for Uniswap's use case. LayerZero has a planned upgrade to its oracle and relayer set that would likely address these concerns.**
+  - Conclusion: The immutability of the LayerZero protocol and the potential for applications to choose their own Oracles are both advantages over Wormhole in theory, but in practice, its security model looked too much like a 2-of-2 multisig with Chainlink and LayerZero Labs as the signers. While Wormhole contracts are upgradeable, which introduces risk, and while Wormhole doesn’t allow applications to configure their own validator sets, a 13-of-19 Guardians model appeared to be more decentralized.
+- The thing is… Bryan agrees. LayerZero v1 has been safe and has successfully handled a ton of messages and assets, but in practice, the messaging around Oracles was too confusing, and building a Relayer was too hard, for most projects to move beyond the defaults.
+
+  So for the past 18 months, the team has been cooking up something new and improved.
+
+  And there comes the birth of LZ v2.
 
 ## References
 
-- [LayerZero: The Language of the Omnichain](https://www.notboring.co/p/layerzero-the-language-of-the-omnnichain)
+- [LayerZero: The Language of the Omnichain](https://www.notboring.co/p/layerzero-the-language-of-the-omnnichain) 🧑🏻‍💻
