@@ -14,7 +14,7 @@
   - In v1, verification and execution were provided by Oracles and Relayers. In v2, they’re provided by **Decentralized Verifier Networks (DVNs)** and **Executors**.
   - What hasn’t changed between v1 and v2 is that endpoints are immutable and validation libraries are append-only.
   - Importantly, in v2, LayerZero Labs has totally decoupled security from execution in order to guarantee censorship-resistance without impacting liveness, or the ability of the protocol to continue functioning and processing transactions without interruption.
-
+- Verification and execution of messages are up to the application to decide; they can hook any set of verifiers and any executor they choose into the protocol.
 - Traditional way of **bridging chains**:
   
   So if you wanted to send your tokens from say, Ethereum to Polygon, in order to use an app on Polygon, you’d go to a bridge and the bridge would do a few things:
@@ -62,7 +62,64 @@
   So for the past 18 months, the team has been cooking up something new and improved.
 
   And there comes the birth of LZ v2.
+- Why it's hard to implement own relayer of LZ?
+  - In theory, anyone could build and deploy their own Relayer. In practice, Bryan told me, “A Relayer is impossibly hard to run. We had to build an internal custodian, real-time n^2 pricing, write more messages to chain than anyone in the world, and essentially run Alchemy internally.” So no one built Relayers.
+
+  And because no one built Relayers, LayerZero Labs was a potential chokepoint. If LayerZero Labs’ Relayer went down, the whole network would have a liveness issue – transactions wouldn’t go through – until someone, likely the App itself, came in and picked up transactions. [Source](<https://www.notboring.co/p/layerzero-the-language-of-the-omnnichain>)
+- Applications are responsible for their own extrinsic security, and for selecting an Executor.
+- Instead of Relayers, applications choose their own Executors, which live outside of the security of the protocol. These Executors are mainly responsible for quoting prices and gas and handling all of the complexities of transactions for applications and their users. In exchange, they’ll charge a small fee on top of the cost of gas.
+- **DVN**:
+- **Executors**: These are mainly **responsible for quoting prices and gas and handling all of the complexities of transactions** for applications and their users. In exchange, they’ll charge a small fee on top of the cost of gas.
+  
+  LayerZero Labs will run an optional Executor that applications can choose to run, and that will be the default out of the box, but it encourages applications to set up their own configurations. LayerZero Labs will have to compete on price and service. Importantly, Executors are much simpler to run than Relayers, because v2 decouples security and execution, so LayerZero Labs expects there to be strong competition. If needed, applications can even execute easily onchain or users can self-execute.
+- **Fees**: As per v1, they had 3 fees: Relayer, Oracle, LZ (protocol). In v2, this will be replaced by, Verifier Fees (to DVN), Executor Fees (to executors), and LayerZero Fees in v2.
+
+> **From a product perspective, LayerZero is like TCP/IP. From a business perspective, it’s like VISA.** Although Bryan disagrees.
+>
+> If Stripe’s mission is to increase the GDP of the internet, LayerZero’s might be to increase the GDP of the Omnichain
+
+- As new **Verifiers** come into the network and compete for business, the Security-Cost Pareto Frontier shifts. As new **Executors** come into the network and compete for business, execution gets tighter. As new chains come online, each with improvements to previous models, the **Omnichain** gets stronger.
+
+### Development
+
+- Make sure LZ endpoint is deployed on the new chain before going ahead. [Source](https://docs.layerzero.network/contracts/project-setup#adding-external-networks).
+- [Set LZ config](https://docs.layerzero.network/contracts/project-config#modifying-layerzero-config):
+  - The npx package uses `@layerzerolabs/lz-definitions` to enable you to reference both V1 and V2 Endpoints. Make sure if your project uses LayerZero V2 to select the V2 Endpoint (i.e., `eid: EXAMPLE_V2_MAINNET`).
+  - Deployed address can be used in defining the contract in `layerzero.config.ts`:
+
+  ```ts
+  // Define the Mumbai (Polygon) contract
+
+  // address can also be specified for deployed contracts.
+  const mumbaiContract = {
+    eid: EndpointId.POLYGON_V2_TESTNET,
+    address: '0x123',
+  };
+  ```
+
+  - After defining what contracts to use on each network, you can specify which contracts should be connected on a per pathway basis.
+- **quote before send tx**: Because cross-chain gas fees are dynamic, this quote should be generated right before calling _lzSend to ensure accurate pricing.
+
+> INFO:
+>
+> Remember that when sending a message through LayerZero, the msg.sender will be paying for gas on the source chain, fees to the selected DVNs to validate the message, and for gas on the destination chain to execute the transaction. This results in a single bundled fee on the source chain, abstracting gas away on every other chain, leading to better composability.
+
+- [Message Patterns](https://docs.layerzero.network/contracts/message-design-patterns) can be used for different use case especially in DeFi utilities where the good liquidity pools are scattered across multiple networks.
+- **Delegate in OApp**: In a given OApp, a delegate is able to apply configurations on behalf of the OApp. This delegate gains the ability to handle various critical tasks such as setting **configurations** and **MessageLibs**, and skipping or clearing **payloads**.
+
+  By default, the contract owner is set as the delegate using `setDelegate()` function. [More on setting custom config](https://docs.layerzero.network/contracts/oapp-configuration).
+
+## Tools
+
+- [LZ block explorer](https://layerzeroscan.com/)
+  - `In flight` status: Message has not been delivered yet.
+  - `Delivered` status: Message has been delivered.
+
+## Community
+
+- [Discord](https://discord-layerzero.netlify.app/discord)
 
 ## References
 
-- [LayerZero: The Language of the Omnichain](https://www.notboring.co/p/layerzero-the-language-of-the-omnnichain) 🧑🏻‍💻
+- [LayerZero: The Language of the Omnichain](https://www.notboring.co/p/layerzero-the-language-of-the-omnnichain) ✅
+- [LayerZero V2 Deep Dive](https://medium.com/layerzero-official/layerzero-v2-deep-dive-869f93e09850)
