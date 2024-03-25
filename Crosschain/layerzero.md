@@ -98,6 +98,7 @@
   ```
 
   - After defining what contracts to use on each network, you can specify which contracts should be connected on a per pathway basis.
+  - [Config DVNs](https://docs.layerzero.network/contracts/configure-dvns) in LZ OApp. By default it is not required.
 - **quote before send tx**: Because cross-chain gas fees are dynamic, this quote should be generated right before calling _lzSend to ensure accurate pricing.
 
 > INFO:
@@ -108,7 +109,12 @@
 - **Delegate in OApp**: In a given OApp, a delegate is able to apply configurations on behalf of the OApp. This delegate gains the ability to handle various critical tasks such as setting **configurations** and **MessageLibs**, and skipping or clearing **payloads**.
 
   By default, the contract owner is set as the delegate using `setDelegate()` function. [More on setting custom config](https://docs.layerzero.network/contracts/oapp-configuration).
-
+- Make your blockchain/contract(s) compatible with LayerZero:
+  - [Option-1](https://docs.layerzero.network/contracts/sending-tokens#option-1-protocols-or-dexs-built-on-layerzero) has a dependency on Stargate bridge to support your chain.
+  - [Option-2](https://docs.layerzero.network/contracts/sending-tokens#option-2-wrapped-asset-bridges) requires to contact LZ or deploy [LZ endpoint](https://docs.layerzero.network/explore/layerzero-endpoint) on your chain. This setup required on [source](https://docs.layerzero.network/explore/layerzero-endpoint#sending-endpoint) chain & [destination chain](https://docs.layerzero.network/explore/layerzero-endpoint#receiving-endpoint)
+- More on [DVNs](https://docs.layerzero.network/explore/decentralized-verifier-networks) who are responsible for verifying the messages sent to destination chain.
+- More on [Executors](https://docs.layerzero.network/explore/executors) and their roles details. They mainly take charge after it is verified by DVNs.
+  
 ## Tools
 
 - [LZ block explorer](https://layerzeroscan.com/)
