@@ -1,54 +1,62 @@
 ## Applications
-#### FINANCE:
+
+#### FINANCE
+
 - transfer money cross-border.
 - decentralize power => lower Txn fees.
 
-#### RECORD-KEEPING:
+#### RECORD-KEEPING
+
 - storing files safely.
 
-#### ELECTION:
+#### ELECTION
+
 - Trace votes securely
 - voter (vote-in, vote-out)
 - political_party (display choices in manifesto)
 
-#### CHARITY:
+#### CHARITY
+
 - Trace money usage securely.
 - donator transfers amount to contract_ac, memo(string)
 - distribute amount to institutes.
 
-#### BET:
+#### BET
+
 - decision with money
 - usr1
 - usr2
-- account 
+- account
 
 Demo: usr1 -> contract_account (100 rs.)
       usr2 -> contract_ac (100 rs.)
       on_success: contract_ac -> winner
 
+#### SUPPLY CHAIN
 
-#### SUPPLY CHAIN:
 - trace packages securely
 
-#### SOCIAL:
+#### SOCIAL
+
 - incentivize people with money.
 - remove all customer care services with this.
 - content authenticity (cue from Reddit, Stack Overflow)
 
-#### FOOD:
+#### FOOD
+
 - Lower cost
 - eliminating commission (like in Zomato/FoodPanda/Swiggy)
 
-#### TRANSPORTATION Industry:
+#### TRANSPORTATION Industry
+
 - Lower travel cost
 - eliminating commission (like in Ola/Uber).
 
-#### ENTERTAINMENT Industry:
+#### ENTERTAINMENT Industry
+
 - Piracy protection
 
-#### REAL ESTATE:
+#### REAL ESTATE
+
 - lower property/asset cost/rent.
 - eliminating brokers.
-
-
-
